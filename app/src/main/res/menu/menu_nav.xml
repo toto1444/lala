@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/subway"
+        android:title="Subway"
+        android:icon="@drawable/ic_subway"
+        />
+
+    <item
+        android:id="@+id/bus"
+        android:title="Bus"
+        android:icon="@drawable/ic_bus"
+        />
+
+    <item
+        android:id="@+id/taxi"
+        android:title="Taxi"
+        android:icon="@drawable/ic_taxi"
+        />
+
+    <item
+        android:id="@+id/food"
+        android:title="Food"
+        android:icon="@drawable/ic_restaurant"
+        />
+
+    <item
+        android:id="@+id/emergency"
+        android:title="Emergency"
+        android:icon="@drawable/ic_emergency"
+        />
+
+</menu>
