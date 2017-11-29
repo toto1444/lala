@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:lottie_autoPlay="true"
-        app:lottie_fileName=".json"
+        app:lottie_fileName="motorcycle.json"
         app:lottie_loop="true"/>
 
     <TextView
@@ -19,8 +19,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="89dp"
-        android:text="Scan"
-        android:textSize="30sp" />
+        android:text="Loading all the delicious food of the world ..."
+        android:textSize="18sp" />
 
 
 </RelativeLayout>

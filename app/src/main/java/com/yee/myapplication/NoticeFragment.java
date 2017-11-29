@@ -26,6 +26,10 @@ import java.util.HashMap;
  */
 
 public class NoticeFragment extends Fragment {
+    public static NoticeFragment newInstance() {
+        NoticeFragment fragment = new NoticeFragment();
+        return fragment;
+    }
     //DATA parsing 관련
     String url = "http://pho901121.cafe24.com/login/db_get_notice_posts.php";
     private static final String TAG_RESULTS = "posts";
@@ -40,7 +44,7 @@ public class NoticeFragment extends Fragment {
     private LinearLayoutManager mLinearLayoutManager;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_notice, container, false);
         noticeList = new ArrayList<HashMap<String, String>>();
         mLinearLayoutManager = new LinearLayoutManager(getActivity());
@@ -50,15 +54,13 @@ public class NoticeFragment extends Fragment {
         rv.setLayoutManager(mLinearLayoutManager);
 /*
         //폰 내 db와 연결하여 uid 얻어와 보내기 - Fragment 이기 때문에 context가 getActivity()
-        helper = new DBhelper(getActivity(), "users2.db", null, DBhelper.DB_VER);
-        url += "?uid=" + help
-    DBhelper helper;er.getId(getActivity());
+        helper = new DBhelper(getActivity(), "users2.db",null,DBhelper.DB_VER);
+        url += "?uid=" + helper.getId(getActivity());
         Log.e("getuid: ", helper.getId(getActivity()));
         getData(url);
 */
         return view;
     }
-
     /**
      * JSON 파싱 메소드
      **/

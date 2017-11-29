@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                         selectedFragment = Menu_4th.newInstance();
                         break;
                     case R.id.emergency:
-                        //selectedFragment = NoticeFragment.newInstance();
+                        selectedFragment = Menu_5th.newInstance();
                         break;
                 }
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();

@@ -2,20 +2,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.yee.myapplication.ItemTwoFragment">
 
-    <ImageView
-        android:id="@+id/truiton_image"
-        android:layout_width="300dp"
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="cloud_sync.json"
+        app:lottie_loop="true" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_below="@+id/animation_view2"
+        android:id="@+id/animation_view"
+        android:layout_width="wrap_content"
         android:layout_height="300dp"
-        android:layout_centerInParent="true"/>
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="78dp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="antenna.json"
+        app:lottie_loop="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/truiton_image"
+        android:layout_below="@+id/animation_view"
         android:layout_centerHorizontal="true"
-        android:text="Fragment 2"
-        android:textSize="30sp"/>
+        android:text="Disconnected......!"
+        android:textSize="12sp"/>
 
 </RelativeLayout>
