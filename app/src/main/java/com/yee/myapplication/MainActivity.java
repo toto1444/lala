@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         BottomNavigationView bottomNavigationView = findViewById(R.id.navbot);
+        BottomNavigationViewHelper.removeShiftMode(bottomNavigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                         selectedFragment = Menu_4th.newInstance();
                         break;
                     case R.id.emergency:
-                        selectedFragment = Menu_5th.newInstance();
+                        //selectedFragment = NoticeFragment.newInstance();
                         break;
                 }
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
