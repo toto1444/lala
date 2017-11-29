@@ -17,6 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- <activity android:name="com.yee.myapplication.IntroActivity"
+        android:label="@string/app_intro" />-->
     </application>
 
 </manifest>

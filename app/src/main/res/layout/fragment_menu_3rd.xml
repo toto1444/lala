@@ -19,7 +19,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="89dp"
-        android:text="Fragment 3"
+        android:text="Looking for Taxi..."
         android:textSize="30sp" />
 
 </RelativeLayout>
