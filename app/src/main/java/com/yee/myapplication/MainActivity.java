@@ -8,15 +8,13 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.Window;
-import android.widget.ImageView;c
-
-import com.pixplicity.sharp.Sharp;
+import android.widget.ImageView;
 //import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
     private ImageView mImageView;
-    private Sharp mSvg;
+    //private Sharp mSvg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +33,15 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.bus:
                         selectedFragment = ItemTwoFragment.newInstance();
                         break;
-                    /*case R.id.action_item3:
-                        selectedFragment = ItemThreeFragment.newInstance();
-                        break;*/
+                    case R.id.taxi:
+                        selectedFragment = Menu_3rd.newInstance();
+                        break;
+                    case R.id.food:
+                        selectedFragment = Menu_4th.newInstance();
+                        break;
+                    case R.id.emergency:
+                        selectedFragment = Menu_5th.newInstance();
+                        break;
                 }
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.frame_layout, selectedFragment);
