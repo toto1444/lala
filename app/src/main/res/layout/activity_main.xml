@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,18 +10,25 @@
     android:orientation="vertical"
     >
 
-    <View
+    <FrameLayout
+        android:id="@+id/frame_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        />
+        android:layout_above="@+id/navbot"
+        android:animateLayoutChanges="true">
+
+    </FrameLayout>
 
     <android.support.design.widget.BottomNavigationView
         android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="121dp"
         android:id="@+id/navbot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
         app:menu="@menu/menu_nav" />
+    <!-- android:background="@color/colorPrimary" -->
+    <!-- app:itemIconTint="@color/nav_item_state_list" -->
+    <!-- app:itemTextColor="@color/nav_item_state_list" -->
 
-</LinearLayout>
+</RelativeLayout>
